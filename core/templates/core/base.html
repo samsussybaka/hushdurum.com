@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'core/style.css' %}" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="{% static 'core/images/kisspng-walter-white-jesse-pinkman-logo-television-show-breaking-bad-5ac225c89697e5.7349853015226730966168.png' %}" alt="logo" class="logo">
+
+                <nav>
+                    <ul>
+                        {% if user.is_authenticated %}
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">Add Comunity</a></li>
+                        <li><a href="/accounts/logout">Logout</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/cool">Cool Thing</a></li>
+                        <li><a href="addPosts/">Add post</a></li>
+                        {% else %}
+                        <li><a href="/accounts/login">Login</a></li>
+                        <li><a href="/accounts/register">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <content>
+            {% block content %}
+            {% endblock %}
+        </content>
+        <footer>
+            <div class="footer">
+                <p class="footer-text-left">
+                    {% if user.is_authenticated %}
+                    <a href="/" class="menu">Home</a>
+                    <a href="#" class="menu">about</a>
+                    {% else %}
+                    <a href="/" class="menu">Home</a>
+                    <a href="/accounts/login" class="menu">login</a>
+                    {% endif %}
+                </p>
+                <div class="footer-content-right">
+                    <a href="#"><img src="{% static 'core/images/github.jpeg' %}" class="icon-style" alt="Github icon"></a>
+                    <a href="#"><img src="{% static 'core/images/email.jpeg' %}" class="icon-style" alt="Email icon"></a>
+                    <a href="#"><img src="{% static 'core/images/twitter.jpeg' %}" class="icon-style" alt="Twitter icon"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

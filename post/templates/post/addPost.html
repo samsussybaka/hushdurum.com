@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Profile | Hushdurum{% endblock %}
+
+
+{% block content %}
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            Add
+        </button>
+    </form>
+</div>
+
+
+
+{% endblock %}
