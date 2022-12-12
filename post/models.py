@@ -1,5 +1,6 @@
 from django.db import models
 from email.message import EmailMessage
+from django.utils.text import slugify
 import ssl
 import smtplib
 # Create your models here.
