@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/login', login_view),
     path('accounts/register', register_view),
     path('accounts/logout', logout_view),
-    path('/cool', views.CoolPage),
+    path('cool/', views.CoolPage),
     path('profile/', view_Profile, name='users-profile'),
     path('addPosts/', addPost),
 ]

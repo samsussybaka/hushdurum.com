@@ -12,8 +12,8 @@
                         <div class="dl-highlights-card hl-features js-redirect" data-url="">
                             {% if user.is_authenticated %}
                                 {% for Post in Post %}
-                                <h2 class="Post-titles">{{ Post.title }}</h2>
-                                <p class="post-desc">{{ Post.description }}</p>
+                                <h2 class="Post-titles" style="font-family: Arial, Helvetica, sans-serif; font-size: 40px;">{{ Post.title }}</h2>
+                                <p class="post-desc" style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; color: rgba(255, 255, 255, 0.445);">{{ Post.description }}</p>
                             {% endfor %}
                             {% else %}
 
