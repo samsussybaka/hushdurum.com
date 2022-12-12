@@ -4,8 +4,14 @@
 
 
 {% block content %}
-    <form method="post" action="#">
-        <button>Save</button>
-    </form>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title" name="title" style="color: white;">Task Subject</label>
+        <input type="text" name="title" required_id="title">
 
+        <label for="description" name="decription" style="color: white;">Task description</label>
+        <input type="text" name="decription" required_id="description">
+
+        <button type="submit">Submit</button>
+    </form>
 {% endblock %}
