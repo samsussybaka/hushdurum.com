@@ -4,15 +4,15 @@
 {% endblock %}
 
 {% block content %}
-    <form class="login-form" method="POST">
+    <form class="login-form" method="POST" style="background: #9ea7a4;">
         <div class="login-form__content">
             <div class="login-form__header">Login To Your Account</div>
             {% csrf_token %}
             <input type="text" name="username" required_id="id_username" placeholder="Username" class="login-form__input">
             <input type="text" name="password" required_id="id_password" placeholder="Password" class="login-form__input">
-            <button type="submit" class="login-form__button">Login</button>
+            <button type="submit" class="login-form__button" style="background: #252525;">Login</button>
         </div>
     </form>
-    <p class="login-form__change">Don't have an account?</p>
+    <p class="login-form__change" style="color: #9ea7a4;">Don't have an account?</p>
     <a href="/accounts/register" class="login-form__change">Register here</a>
 {% endblock %}

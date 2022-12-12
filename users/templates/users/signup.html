@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-<form class="login-form" method="POST">
+<form class="login-form" method="POST" style="background: #9ea7a4;">
     <div class="login-form__content">
         <div class="login-form__header">Register an Account</div>
         {% csrf_token %}
@@ -12,9 +12,9 @@
         <input type="email" name="email" required_id="id_email" placeholder="Email" class="login-form__input">
         <input type="email" name="email2" required_id="id_email20" placeholder="Confirm Email" class="login-form__input">
         <input type="text" name="password" required_id="id_password" placeholder="Password" class="login-form__input">
-        <button type="submit" class="login-form__button">Login</button>
+        <button type="submit" class="login-form__button" style="background: #252525;">SignUp</button>
     </div>
 </form>
-<p class="login-form__change">Already have an account?</p>
+<p class="login-form__change" style="color: #9ea7a4;">Already have an account?</p>
 <a href="/accounts/login" class="login-form__change">Login here</a>
 {% endblock %}
