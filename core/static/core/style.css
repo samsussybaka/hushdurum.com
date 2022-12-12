@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: #222;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .container {
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: #55d6aa;
+    background: #9ea7a4;
 }
 
 header::after{
@@ -63,7 +63,7 @@ nav a:hover{
     left: 0;
     width: 100%;
     height: 90px;
-    background-color: #55d6aa;
+    background-color: #9ea7a4;
 }
 
 .footer-text-left a:hover{
@@ -194,7 +194,7 @@ a {
 }
 
 p {
-    color: green;
+    color: #848d84;
 }
 
 .Post-title{
@@ -275,3 +275,13 @@ p {
     margin: 10px;
     align-self: center;
 }
+
+.main{
+    padding-top: 40px;
+}
+
+.container{
+    padding-top: 40px;
+}
+
+
